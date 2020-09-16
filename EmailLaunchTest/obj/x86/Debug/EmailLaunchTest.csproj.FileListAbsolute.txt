@@ -1,0 +1,6 @@
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/bin/Debug/EmailLaunchTest.exe
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/bin/Debug/EmailLaunchTest.pdb
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/obj/x86/Debug/EmailLaunchTest.csprojAssemblyReference.cache
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/obj/x86/Debug/EmailLaunchTest.csproj.CoreCompileInputs.cache
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/obj/x86/Debug/EmailLaunchTest.exe
+/home/rob/Projects/EmailLaunchTest/EmailLaunchTest/obj/x86/Debug/EmailLaunchTest.pdb

@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{21223380-E86D-49E7-ACF3-30CE289337E2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmailLaunchTest/Program.cs">
+    <Files>
+      <File FileName="EmailLaunchTest/Program.cs" Line="36" Column="1" />
+      <File FileName="EmailLaunchTest/Web References/LaunchSvc/Reference.cs" Line="1166" Column="44" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EmailLaunchTest" expanded="True">
+            <Node name="EmailLaunchTest" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EmailLaunchTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

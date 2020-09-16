@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://launch.v81.api.keysurvey.com" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="LaunchManagement" targetNamespace="http://launch.v81.api.keysurvey.com" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://app.form.com:443/Member/api/v81/launch/LaunchManagementService?xsd=1" namespace="http://v81.api.keysurvey.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://app.form.com:443/Member/api/v81/launch/LaunchManagementService?xsd=2" namespace="http://launch.v81.api.keysurvey.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </types>
+  <message name="getMasterUrl">
+    <part name="parameters" element="tns:getMasterUrl" />
+  </message>
+  <message name="getMasterUrlResponse">
+    <part name="parameters" element="tns:getMasterUrlResponse" />
+  </message>
+  <message name="WSSecurityException">
+    <part xmlns:ns1="http://v81.api.keysurvey.com" name="fault" element="ns1:WSSecurityException" />
+  </message>
+  <message name="WSIllegalArgumentException">
+    <part xmlns:ns2="http://v81.api.keysurvey.com" name="fault" element="ns2:WSIllegalArgumentException" />
+  </message>
+  <message name="WSObjectNotFoundException">
+    <part xmlns:ns3="http://v81.api.keysurvey.com" name="fault" element="ns3:WSObjectNotFoundException" />
+  </message>
+  <message name="WSInternalServerException">
+    <part xmlns:ns4="http://v81.api.keysurvey.com" name="fault" element="ns4:WSInternalServerException" />
+  </message>
+  <message name="getUniqueUrl">
+    <part name="parameters" element="tns:getUniqueUrl" />
+  </message>
+  <message name="getUniqueUrlResponse">
+    <part name="parameters" element="tns:getUniqueUrlResponse" />
+  </message>
+  <message name="getUniqueUrls">
+    <part name="parameters" element="tns:getUniqueUrls" />
+  </message>
+  <message name="getUniqueUrlsResponse">
+    <part name="parameters" element="tns:getUniqueUrlsResponse" />
+  </message>
+  <message name="getEmailReminders">
+    <part name="parameters" element="tns:getEmailReminders" />
+  </message>
+  <message name="getEmailRemindersResponse">
+    <part name="parameters" element="tns:getEmailRemindersResponse" />
+  </message>
+  <message name="createEmailReminder">
+    <part name="parameters" element="tns:createEmailReminder" />
+  </message>
+  <message name="createEmailReminderResponse">
+    <part name="parameters" element="tns:createEmailReminderResponse" />
+  </message>
+  <message name="updateEmailReminder">
+    <part name="parameters" element="tns:updateEmailReminder" />
+  </message>
+  <message name="updateEmailReminderResponse">
+    <part name="parameters" element="tns:updateEmailReminderResponse" />
+  </message>
+  <message name="getEmailReminder">
+    <part name="parameters" element="tns:getEmailReminder" />
+  </message>
+  <message name="getEmailReminderResponse">
+    <part name="parameters" element="tns:getEmailReminderResponse" />
+  </message>
+  <message name="deleteEmailReminder">
+    <part name="parameters" element="tns:deleteEmailReminder" />
+  </message>
+  <message name="deleteEmailReminderResponse">
+    <part name="parameters" element="tns:deleteEmailReminderResponse" />
+  </message>
+  <message name="getAutofillData">
+    <part name="parameters" element="tns:getAutofillData" />
+  </message>
+  <message name="getAutofillDataResponse">
+    <part name="parameters" element="tns:getAutofillDataResponse" />
+  </message>
+  <message name="setFormEmailTemplate">
+    <part name="parameters" element="tns:setFormEmailTemplate" />
+  </message>
+  <message name="setFormEmailTemplateResponse">
+    <part name="parameters" element="tns:setFormEmailTemplateResponse" />
+  </message>
+  <message name="getFormEmailTemplate">
+    <part name="parameters" element="tns:getFormEmailTemplate" />
+  </message>
+  <message name="getFormEmailTemplateResponse">
+    <part name="parameters" element="tns:getFormEmailTemplateResponse" />
+  </message>
+  <message name="sendUniqueUrlByEmail">
+    <part name="parameters" element="tns:sendUniqueUrlByEmail" />
+  </message>
+  <message name="sendUniqueUrlByEmailResponse">
+    <part name="parameters" element="tns:sendUniqueUrlByEmailResponse" />
+  </message>
+  <message name="setDefaultUrlType">
+    <part name="parameters" element="tns:setDefaultUrlType" />
+  </message>
+  <message name="setDefaultUrlTypeResponse">
+    <part name="parameters" element="tns:setDefaultUrlTypeResponse" />
+  </message>
+  <message name="getDefaultUrlType">
+    <part name="parameters" element="tns:getDefaultUrlType" />
+  </message>
+  <message name="getDefaultUrlTypeResponse">
+    <part name="parameters" element="tns:getDefaultUrlTypeResponse" />
+  </message>
+  <message name="getUniqueUrlSendingStatus">
+    <part name="parameters" element="tns:getUniqueUrlSendingStatus" />
+  </message>
+  <message name="getUniqueUrlSendingStatusResponse">
+    <part name="parameters" element="tns:getUniqueUrlSendingStatusResponse" />
+  </message>
+  <message name="getIncompleteEmails">
+    <part name="parameters" element="tns:getIncompleteEmails" />
+  </message>
+  <message name="getIncompleteEmailsResponse">
+    <part name="parameters" element="tns:getIncompleteEmailsResponse" />
+  </message>
+  <message name="getUniqueUrlByEmail">
+    <part name="parameters" element="tns:getUniqueUrlByEmail" />
+  </message>
+  <message name="getUniqueUrlByEmailResponse">
+    <part name="parameters" element="tns:getUniqueUrlByEmailResponse" />
+  </message>
+  <message name="publishOnParticipantPortal">
+    <part name="parameters" element="tns:publishOnParticipantPortal" />
+  </message>
+  <message name="publishOnParticipantPortalResponse">
+    <part name="parameters" element="tns:publishOnParticipantPortalResponse" />
+  </message>
+  <message name="setPortalResponseSettings">
+    <part name="parameters" element="tns:setPortalResponseSettings" />
+  </message>
+  <message name="setPortalResponseSettingsResponse">
+    <part name="parameters" element="tns:setPortalResponseSettingsResponse" />
+  </message>
+  <message name="getPortalResponseSettings">
+    <part name="parameters" element="tns:getPortalResponseSettings" />
+  </message>
+  <message name="getPortalResponseSettingsResponse">
+    <part name="parameters" element="tns:getPortalResponseSettingsResponse" />
+  </message>
+  <message name="setDataFlowSettings">
+    <part name="parameters" element="tns:setDataFlowSettings" />
+  </message>
+  <message name="setDataFlowSettingsResponse">
+    <part name="parameters" element="tns:setDataFlowSettingsResponse" />
+  </message>
+  <message name="getDataFlowSettings">
+    <part name="parameters" element="tns:getDataFlowSettings" />
+  </message>
+  <message name="getDataFlowSettingsResponse">
+    <part name="parameters" element="tns:getDataFlowSettingsResponse" />
+  </message>
+  <message name="setFormVisibilityOnPortal">
+    <part name="parameters" element="tns:setFormVisibilityOnPortal" />
+  </message>
+  <message name="setFormVisibilityOnPortalResponse">
+    <part name="parameters" element="tns:setFormVisibilityOnPortalResponse" />
+  </message>
+  <message name="getFormVisibilityOnPortal">
+    <part name="parameters" element="tns:getFormVisibilityOnPortal" />
+  </message>
+  <message name="getFormVisibilityOnPortalResponse">
+    <part name="parameters" element="tns:getFormVisibilityOnPortalResponse" />
+  </message>
+  <message name="sendUniqueURLsToCMList">
+    <part name="parameters" element="tns:sendUniqueURLsToCMList" />
+  </message>
+  <message name="sendUniqueURLsToCMListResponse">
+    <part name="parameters" element="tns:sendUniqueURLsToCMListResponse" />
+  </message>
+  <message name="lockAccessToContact">
+    <part name="parameters" element="tns:lockAccessToContact" />
+  </message>
+  <message name="lockAccessToContactResponse">
+    <part name="parameters" element="tns:lockAccessToContactResponse" />
+  </message>
+  <message name="isFormPublishedToPortal">
+    <part name="parameters" element="tns:isFormPublishedToPortal" />
+  </message>
+  <message name="isFormPublishedToPortalResponse">
+    <part name="parameters" element="tns:isFormPublishedToPortalResponse" />
+  </message>
+  <message name="getVotingLink">
+    <part name="parameters" element="tns:getVotingLink" />
+  </message>
+  <message name="getVotingLinkResponse">
+    <part name="parameters" element="tns:getVotingLinkResponse" />
+  </message>
+  <message name="sendUniqueUrlWithAutofillByEmail">
+    <part name="parameters" element="tns:sendUniqueUrlWithAutofillByEmail" />
+  </message>
+  <message name="sendUniqueUrlWithAutofillByEmailResponse">
+    <part name="parameters" element="tns:sendUniqueUrlWithAutofillByEmailResponse" />
+  </message>
+  <message name="getUniqueUrlWithAutofillByEmail">
+    <part name="parameters" element="tns:getUniqueUrlWithAutofillByEmail" />
+  </message>
+  <message name="getUniqueUrlWithAutofillByEmailResponse">
+    <part name="parameters" element="tns:getUniqueUrlWithAutofillByEmailResponse" />
+  </message>
+  <message name="passwordProtectWithAutofill">
+    <part name="parameters" element="tns:passwordProtectWithAutofill" />
+  </message>
+  <message name="passwordProtectWithAutofillResponse">
+    <part name="parameters" element="tns:passwordProtectWithAutofillResponse" />
+  </message>
+  <message name="publishOnParticipantPortalWithNewFilter">
+    <part name="parameters" element="tns:publishOnParticipantPortalWithNewFilter" />
+  </message>
+  <message name="publishOnParticipantPortalWithNewFilterResponse">
+    <part name="parameters" element="tns:publishOnParticipantPortalWithNewFilterResponse" />
+  </message>
+  <message name="sendUniqueURLsToCMListForNewFilter">
+    <part name="parameters" element="tns:sendUniqueURLsToCMListForNewFilter" />
+  </message>
+  <message name="sendUniqueURLsToCMListForNewFilterResponse">
+    <part name="parameters" element="tns:sendUniqueURLsToCMListForNewFilterResponse" />
+  </message>
+  <message name="passwordProtectionThroughContactManager">
+    <part name="parameters" element="tns:passwordProtectionThroughContactManager" />
+  </message>
+  <message name="passwordProtectionThroughContactManagerResponse">
+    <part name="parameters" element="tns:passwordProtectionThroughContactManagerResponse" />
+  </message>
+  <message name="passwordProtectionThroughContactManagerForNewFilter">
+    <part name="parameters" element="tns:passwordProtectionThroughContactManagerForNewFilter" />
+  </message>
+  <message name="passwordProtectionThroughContactManagerForNewFilterResponse">
+    <part name="parameters" element="tns:passwordProtectionThroughContactManagerForNewFilterResponse" />
+  </message>
+  <message name="setFormTag">
+    <part name="parameters" element="tns:setFormTag" />
+  </message>
+  <message name="setFormTagResponse">
+    <part name="parameters" element="tns:setFormTagResponse" />
+  </message>
+  <message name="getFormTag">
+    <part name="parameters" element="tns:getFormTag" />
+  </message>
+  <message name="getFormTagResponse">
+    <part name="parameters" element="tns:getFormTagResponse" />
+  </message>
+  <portType name="LaunchManagementService">
+    <operation name="getMasterUrl">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrlRequest" message="tns:getMasterUrl" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrlResponse" message="tns:getMasterUrlResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrl/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrl/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrl/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getMasterUrl/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getUniqueUrl">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlRequest" message="tns:getUniqueUrl" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlResponse" message="tns:getUniqueUrlResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrl/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrl/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrl/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrl/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getUniqueUrls">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlsRequest" message="tns:getUniqueUrls" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlsResponse" message="tns:getUniqueUrlsResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrls/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrls/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrls/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrls/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getEmailReminders">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailRemindersRequest" message="tns:getEmailReminders" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailRemindersResponse" message="tns:getEmailRemindersResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminders/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminders/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminders/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminders/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="createEmailReminder">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminderRequest" message="tns:createEmailReminder" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminderResponse" message="tns:createEmailReminderResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminder/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminder/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminder/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/createEmailReminder/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="updateEmailReminder">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminderRequest" message="tns:updateEmailReminder" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminderResponse" message="tns:updateEmailReminderResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminder/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminder/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminder/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/updateEmailReminder/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getEmailReminder">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminderRequest" message="tns:getEmailReminder" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminderResponse" message="tns:getEmailReminderResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminder/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminder/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminder/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getEmailReminder/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="deleteEmailReminder">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminderRequest" message="tns:deleteEmailReminder" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminderResponse" message="tns:deleteEmailReminderResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminder/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminder/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminder/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/deleteEmailReminder/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getAutofillData">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillDataRequest" message="tns:getAutofillData" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillDataResponse" message="tns:getAutofillDataResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillData/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillData/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillData/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getAutofillData/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="setFormEmailTemplate">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplateRequest" message="tns:setFormEmailTemplate" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplateResponse" message="tns:setFormEmailTemplateResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplate/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplate/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplate/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormEmailTemplate/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getFormEmailTemplate">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplateRequest" message="tns:getFormEmailTemplate" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplateResponse" message="tns:getFormEmailTemplateResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplate/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplate/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplate/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormEmailTemplate/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="sendUniqueUrlByEmail">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmailRequest" message="tns:sendUniqueUrlByEmail" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmailResponse" message="tns:sendUniqueUrlByEmailResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmail/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmail/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmail/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlByEmail/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+    </operation>
+    <operation name="setDefaultUrlType">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlTypeRequest" message="tns:setDefaultUrlType" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlTypeResponse" message="tns:setDefaultUrlTypeResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlType/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlType/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlType/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDefaultUrlType/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getDefaultUrlType">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlTypeRequest" message="tns:getDefaultUrlType" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlTypeResponse" message="tns:getDefaultUrlTypeResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlType/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlType/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlType/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDefaultUrlType/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getUniqueUrlSendingStatus">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatusRequest" message="tns:getUniqueUrlSendingStatus" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatusResponse" message="tns:getUniqueUrlSendingStatusResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatus/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatus/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatus/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlSendingStatus/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getIncompleteEmails">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getIncompleteEmailsRequest" message="tns:getIncompleteEmails" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getIncompleteEmailsResponse" message="tns:getIncompleteEmailsResponse" />
+    </operation>
+    <operation name="getUniqueUrlByEmail">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmailRequest" message="tns:getUniqueUrlByEmail" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmailResponse" message="tns:getUniqueUrlByEmailResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmail/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmail/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmail/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlByEmail/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+    </operation>
+    <operation name="publishOnParticipantPortal">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/publishOnParticipantPortalRequest" message="tns:publishOnParticipantPortal" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/publishOnParticipantPortalResponse" message="tns:publishOnParticipantPortalResponse" />
+    </operation>
+    <operation name="setPortalResponseSettings">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setPortalResponseSettingsRequest" message="tns:setPortalResponseSettings" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setPortalResponseSettingsResponse" message="tns:setPortalResponseSettingsResponse" />
+    </operation>
+    <operation name="getPortalResponseSettings">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getPortalResponseSettingsRequest" message="tns:getPortalResponseSettings" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getPortalResponseSettingsResponse" message="tns:getPortalResponseSettingsResponse" />
+    </operation>
+    <operation name="setDataFlowSettings">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDataFlowSettingsRequest" message="tns:setDataFlowSettings" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setDataFlowSettingsResponse" message="tns:setDataFlowSettingsResponse" />
+    </operation>
+    <operation name="getDataFlowSettings">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDataFlowSettingsRequest" message="tns:getDataFlowSettings" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getDataFlowSettingsResponse" message="tns:getDataFlowSettingsResponse" />
+    </operation>
+    <operation name="setFormVisibilityOnPortal">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormVisibilityOnPortalRequest" message="tns:setFormVisibilityOnPortal" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormVisibilityOnPortalResponse" message="tns:setFormVisibilityOnPortalResponse" />
+    </operation>
+    <operation name="getFormVisibilityOnPortal">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormVisibilityOnPortalRequest" message="tns:getFormVisibilityOnPortal" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormVisibilityOnPortalResponse" message="tns:getFormVisibilityOnPortalResponse" />
+    </operation>
+    <operation name="sendUniqueURLsToCMList">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueURLsToCMListRequest" message="tns:sendUniqueURLsToCMList" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueURLsToCMListResponse" message="tns:sendUniqueURLsToCMListResponse" />
+    </operation>
+    <operation name="lockAccessToContact">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/lockAccessToContactRequest" message="tns:lockAccessToContact" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/lockAccessToContactResponse" message="tns:lockAccessToContactResponse" />
+    </operation>
+    <operation name="isFormPublishedToPortal">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/isFormPublishedToPortalRequest" message="tns:isFormPublishedToPortal" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/isFormPublishedToPortalResponse" message="tns:isFormPublishedToPortalResponse" />
+    </operation>
+    <operation name="getVotingLink">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getVotingLinkRequest" message="tns:getVotingLink" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getVotingLinkResponse" message="tns:getVotingLinkResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getVotingLink/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+    </operation>
+    <operation name="sendUniqueUrlWithAutofillByEmail">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmailRequest" message="tns:sendUniqueUrlWithAutofillByEmail" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmailResponse" message="tns:sendUniqueUrlWithAutofillByEmailResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmail/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmail/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmail/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueUrlWithAutofillByEmail/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+    </operation>
+    <operation name="getUniqueUrlWithAutofillByEmail">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmailRequest" message="tns:getUniqueUrlWithAutofillByEmail" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmailResponse" message="tns:getUniqueUrlWithAutofillByEmailResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmail/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmail/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmail/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getUniqueUrlWithAutofillByEmail/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+    </operation>
+    <operation name="passwordProtectWithAutofill">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofillRequest" message="tns:passwordProtectWithAutofill" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofillResponse" message="tns:passwordProtectWithAutofillResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofill/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofill/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofill/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectWithAutofill/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+    </operation>
+    <operation name="publishOnParticipantPortalWithNewFilter">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/publishOnParticipantPortalWithNewFilterRequest" message="tns:publishOnParticipantPortalWithNewFilter" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/publishOnParticipantPortalWithNewFilterResponse" message="tns:publishOnParticipantPortalWithNewFilterResponse" />
+    </operation>
+    <operation name="sendUniqueURLsToCMListForNewFilter">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueURLsToCMListForNewFilterRequest" message="tns:sendUniqueURLsToCMListForNewFilter" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/sendUniqueURLsToCMListForNewFilterResponse" message="tns:sendUniqueURLsToCMListForNewFilterResponse" />
+    </operation>
+    <operation name="passwordProtectionThroughContactManager">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectionThroughContactManagerRequest" message="tns:passwordProtectionThroughContactManager" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectionThroughContactManagerResponse" message="tns:passwordProtectionThroughContactManagerResponse" />
+    </operation>
+    <operation name="passwordProtectionThroughContactManagerForNewFilter">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectionThroughContactManagerForNewFilterRequest" message="tns:passwordProtectionThroughContactManagerForNewFilter" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/passwordProtectionThroughContactManagerForNewFilterResponse" message="tns:passwordProtectionThroughContactManagerForNewFilterResponse" />
+    </operation>
+    <operation name="setFormTag">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTagRequest" message="tns:setFormTag" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTagResponse" message="tns:setFormTagResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTag/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTag/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTag/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/setFormTag/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+    <operation name="getFormTag">
+      <input wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTagRequest" message="tns:getFormTag" />
+      <output wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTagResponse" message="tns:getFormTagResponse" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTag/Fault/WSSecurityException" name="WSSecurityException" message="tns:WSSecurityException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTag/Fault/WSIllegalArgumentException" name="WSIllegalArgumentException" message="tns:WSIllegalArgumentException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTag/Fault/WSObjectNotFoundException" name="WSObjectNotFoundException" message="tns:WSObjectNotFoundException" />
+      <fault wsam:Action="http://launch.v81.api.keysurvey.com/LaunchManagementService/getFormTag/Fault/WSInternalServerException" name="WSInternalServerException" message="tns:WSInternalServerException" />
+    </operation>
+  </portType>
+  <binding name="LaunchManagementServicePortBinding" type="tns:LaunchManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getMasterUrl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUniqueUrl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUniqueUrls">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEmailReminders">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createEmailReminder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateEmailReminder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEmailReminder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteEmailReminder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAutofillData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setFormEmailTemplate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFormEmailTemplate">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="sendUniqueUrlByEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setDefaultUrlType">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getDefaultUrlType">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUniqueUrlSendingStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getIncompleteEmails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUniqueUrlByEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="publishOnParticipantPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPortalResponseSettings">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPortalResponseSettings">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setDataFlowSettings">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDataFlowSettings">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setFormVisibilityOnPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getFormVisibilityOnPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendUniqueURLsToCMList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="lockAccessToContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isFormPublishedToPortal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVotingLink">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="sendUniqueUrlWithAutofillByEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getUniqueUrlWithAutofillByEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="passwordProtectWithAutofill">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="publishOnParticipantPortalWithNewFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendUniqueURLsToCMListForNewFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="passwordProtectionThroughContactManager">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="passwordProtectionThroughContactManagerForNewFilter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setFormTag">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getFormTag">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="WSSecurityException">
+        <soap:fault use="literal" name="WSSecurityException" namespace="" />
+      </fault>
+      <fault name="WSIllegalArgumentException">
+        <soap:fault use="literal" name="WSIllegalArgumentException" namespace="" />
+      </fault>
+      <fault name="WSObjectNotFoundException">
+        <soap:fault use="literal" name="WSObjectNotFoundException" namespace="" />
+      </fault>
+      <fault name="WSInternalServerException">
+        <soap:fault use="literal" name="WSInternalServerException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="LaunchManagement">
+    <port name="LaunchManagementServicePort" binding="tns:LaunchManagementServicePortBinding">
+      <soap:address location="https://app.form.com:443/Member/api/v81/launch/LaunchManagementService" />
+    </port>
+  </service>
+</definitions>

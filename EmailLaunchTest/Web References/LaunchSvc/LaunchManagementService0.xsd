@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://v81.api.keysurvey.com" xmlns:tns="http://launch.v81.api.keysurvey.com" targetNamespace="http://launch.v81.api.keysurvey.com" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://app.form.com:443/Member/api/v81/launch/LaunchManagementService?xsd=1" namespace="http://v81.api.keysurvey.com" />
+  <xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+  <xs:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+  <xs:element name="createEmailReminder" type="tns:createEmailReminder" />
+  <xs:element name="createEmailReminderResponse" type="tns:createEmailReminderResponse" />
+  <xs:element name="deleteEmailReminder" type="tns:deleteEmailReminder" />
+  <xs:element name="deleteEmailReminderResponse" type="tns:deleteEmailReminderResponse" />
+  <xs:element name="getAutofillData" type="tns:getAutofillData" />
+  <xs:element name="getAutofillDataResponse" type="tns:getAutofillDataResponse" />
+  <xs:element name="getDataFlowSettings" type="tns:getDataFlowSettings" />
+  <xs:element name="getDataFlowSettingsResponse" type="tns:getDataFlowSettingsResponse" />
+  <xs:element name="getDefaultUrlType" type="tns:getDefaultUrlType" />
+  <xs:element name="getDefaultUrlTypeResponse" type="tns:getDefaultUrlTypeResponse" />
+  <xs:element name="getEmailReminder" type="tns:getEmailReminder" />
+  <xs:element name="getEmailReminderResponse" type="tns:getEmailReminderResponse" />
+  <xs:element name="getEmailReminders" type="tns:getEmailReminders" />
+  <xs:element name="getEmailRemindersResponse" type="tns:getEmailRemindersResponse" />
+  <xs:element name="getFormEmailTemplate" type="tns:getFormEmailTemplate" />
+  <xs:element name="getFormEmailTemplateResponse" type="tns:getFormEmailTemplateResponse" />
+  <xs:element name="getFormTag" type="tns:getFormTag" />
+  <xs:element name="getFormTagResponse" type="tns:getFormTagResponse" />
+  <xs:element name="getFormVisibilityOnPortal" type="tns:getFormVisibilityOnPortal" />
+  <xs:element name="getFormVisibilityOnPortalResponse" type="tns:getFormVisibilityOnPortalResponse" />
+  <xs:element name="getIncompleteEmails" type="tns:getIncompleteEmails" />
+  <xs:element name="getIncompleteEmailsResponse" type="tns:getIncompleteEmailsResponse" />
+  <xs:element name="getMasterUrl" type="tns:getMasterUrl" />
+  <xs:element name="getMasterUrlResponse" type="tns:getMasterUrlResponse" />
+  <xs:element name="getPortalResponseSettings" type="tns:getPortalResponseSettings" />
+  <xs:element name="getPortalResponseSettingsResponse" type="tns:getPortalResponseSettingsResponse" />
+  <xs:element name="getUniqueUrl" type="tns:getUniqueUrl" />
+  <xs:element name="getUniqueUrlByEmail" type="tns:getUniqueUrlByEmail" />
+  <xs:element name="getUniqueUrlByEmailResponse" type="tns:getUniqueUrlByEmailResponse" />
+  <xs:element name="getUniqueUrlResponse" type="tns:getUniqueUrlResponse" />
+  <xs:element name="getUniqueUrlSendingStatus" type="tns:getUniqueUrlSendingStatus" />
+  <xs:element name="getUniqueUrlSendingStatusResponse" type="tns:getUniqueUrlSendingStatusResponse" />
+  <xs:element name="getUniqueUrlWithAutofillByEmail" type="tns:getUniqueUrlWithAutofillByEmail" />
+  <xs:element name="getUniqueUrlWithAutofillByEmailResponse" type="tns:getUniqueUrlWithAutofillByEmailResponse" />
+  <xs:element name="getUniqueUrls" type="tns:getUniqueUrls" />
+  <xs:element name="getUniqueUrlsResponse" type="tns:getUniqueUrlsResponse" />
+  <xs:element name="getVotingLink" type="tns:getVotingLink" />
+  <xs:element name="getVotingLinkResponse" type="tns:getVotingLinkResponse" />
+  <xs:element name="isFormPublishedToPortal" type="tns:isFormPublishedToPortal" />
+  <xs:element name="isFormPublishedToPortalResponse" type="tns:isFormPublishedToPortalResponse" />
+  <xs:element name="lockAccessToContact" type="tns:lockAccessToContact" />
+  <xs:element name="lockAccessToContactResponse" type="tns:lockAccessToContactResponse" />
+  <xs:element name="passwordProtectWithAutofill" type="tns:passwordProtectWithAutofill" />
+  <xs:element name="passwordProtectWithAutofillResponse" type="tns:passwordProtectWithAutofillResponse" />
+  <xs:element name="passwordProtectionThroughContactManager" type="tns:passwordProtectionThroughContactManager" />
+  <xs:element name="passwordProtectionThroughContactManagerForNewFilter" type="tns:passwordProtectionThroughContactManagerForNewFilter" />
+  <xs:element name="passwordProtectionThroughContactManagerForNewFilterResponse" type="tns:passwordProtectionThroughContactManagerForNewFilterResponse" />
+  <xs:element name="passwordProtectionThroughContactManagerResponse" type="tns:passwordProtectionThroughContactManagerResponse" />
+  <xs:element name="publishOnParticipantPortal" type="tns:publishOnParticipantPortal" />
+  <xs:element name="publishOnParticipantPortalResponse" type="tns:publishOnParticipantPortalResponse" />
+  <xs:element name="publishOnParticipantPortalWithNewFilter" type="tns:publishOnParticipantPortalWithNewFilter" />
+  <xs:element name="publishOnParticipantPortalWithNewFilterResponse" type="tns:publishOnParticipantPortalWithNewFilterResponse" />
+  <xs:element name="sendUniqueURLsToCMList" type="tns:sendUniqueURLsToCMList" />
+  <xs:element name="sendUniqueURLsToCMListForNewFilter" type="tns:sendUniqueURLsToCMListForNewFilter" />
+  <xs:element name="sendUniqueURLsToCMListForNewFilterResponse" type="tns:sendUniqueURLsToCMListForNewFilterResponse" />
+  <xs:element name="sendUniqueURLsToCMListResponse" type="tns:sendUniqueURLsToCMListResponse" />
+  <xs:element name="sendUniqueUrlByEmail" type="tns:sendUniqueUrlByEmail" />
+  <xs:element name="sendUniqueUrlByEmailResponse" type="tns:sendUniqueUrlByEmailResponse" />
+  <xs:element name="sendUniqueUrlWithAutofillByEmail" type="tns:sendUniqueUrlWithAutofillByEmail" />
+  <xs:element name="sendUniqueUrlWithAutofillByEmailResponse" type="tns:sendUniqueUrlWithAutofillByEmailResponse" />
+  <xs:element name="setDataFlowSettings" type="tns:setDataFlowSettings" />
+  <xs:element name="setDataFlowSettingsResponse" type="tns:setDataFlowSettingsResponse" />
+  <xs:element name="setDefaultUrlType" type="tns:setDefaultUrlType" />
+  <xs:element name="setDefaultUrlTypeResponse" type="tns:setDefaultUrlTypeResponse" />
+  <xs:element name="setFormEmailTemplate" type="tns:setFormEmailTemplate" />
+  <xs:element name="setFormEmailTemplateResponse" type="tns:setFormEmailTemplateResponse" />
+  <xs:element name="setFormTag" type="tns:setFormTag" />
+  <xs:element name="setFormTagResponse" type="tns:setFormTagResponse" />
+  <xs:element name="setFormVisibilityOnPortal" type="tns:setFormVisibilityOnPortal" />
+  <xs:element name="setFormVisibilityOnPortalResponse" type="tns:setFormVisibilityOnPortalResponse" />
+  <xs:element name="setPortalResponseSettings" type="tns:setPortalResponseSettings" />
+  <xs:element name="setPortalResponseSettingsResponse" type="tns:setPortalResponseSettingsResponse" />
+  <xs:element name="updateEmailReminder" type="tns:updateEmailReminder" />
+  <xs:element name="updateEmailReminderResponse" type="tns:updateEmailReminderResponse" />
+  <xs:element name="wsDataFlow" type="tns:WSDataFlow" />
+  <xs:element name="wsDataFlowDirection" type="tns:WSDataFlowDirection" />
+  <xs:element name="wsDataFlowSetting" type="tns:WSDataFlowSetting" />
+  <xs:element name="wsModelObjectFilter" type="tns:WSModelObjectFilter" />
+  <xs:element name="wsModelObjectFilterCondition" type="tns:WSModelObjectFilterCondition" />
+  <xs:element name="wsPortalVisibility" type="tns:WSPortalVisibility" />
+  <xs:complexType name="deleteEmailReminder">
+    <xs:sequence>
+      <xs:element name="reminderId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteEmailReminderResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getFormVisibilityOnPortal">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFormVisibilityOnPortalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSPortalVisibility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSPortalVisibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="startHideDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="startShowDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAutofillData">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="uniqueUrl" type="xs:string" />
+      <xs:element name="answerId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAutofillDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isFormPublishedToPortal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="cmId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isFormPublishedToPortalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passwordProtectWithAutofill">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="autofillDataList" type="tns:WSAutofillData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSAutofillData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:WSAutofillDataItem" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSAutofillDataItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="answers" nillable="true" type="xs:string" />
+      <xs:element name="questionId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passwordProtectWithAutofillResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:WSResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createEmailReminder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reminder" type="tns:WSEmailReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSEmailReminder" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:WSObject">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:long" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="attachments" nillable="true" type="tns:WSFileAttachment" />
+          <xs:element name="enabled" type="xs:boolean" />
+          <xs:element name="formId" type="xs:long" />
+          <xs:element minOccurs="0" name="lastSentDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="mailBody" type="xs:string" />
+          <xs:element name="mailConfirmReceipt" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mailFrom" type="xs:string" />
+          <xs:element name="mailIsHighPriority" type="xs:boolean" />
+          <xs:element minOccurs="0" name="mailReplyTo" type="xs:string" />
+          <xs:element minOccurs="0" name="mailSubject" type="xs:string" />
+          <xs:element minOccurs="0" name="mailUndeliveredTo" type="xs:string" />
+          <xs:element name="reminderId" type="xs:long" />
+          <xs:element name="reminderNumber" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WSFileAttachment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:WSObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="attachment" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WSAbsoluteEmailReminder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WSEmailReminder">
+        <xs:sequence>
+          <xs:element name="appointedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WSRelativeEmailReminder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:WSEmailReminder">
+        <xs:sequence>
+          <xs:element name="numberOfDays" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createEmailReminderResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlByEmail">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="emailList" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlByEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:WSEmailLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSEmailLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="link" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueURLsToCMListForNewFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filter" type="tns:WSModelObjectFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSModelObjectFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="filters" nillable="true" type="tns:WSModelObjectFilterCondition" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="logicalCondition" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSModelObjectFilterCondition">
+    <xs:sequence>
+      <xs:element name="condition" type="tns:wsFilterCondition" />
+      <xs:element minOccurs="0" name="fieldName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueURLsToCMListForNewFilterResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="setFormVisibilityOnPortal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="portalVisibility" type="tns:WSPortalVisibility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setFormVisibilityOnPortalResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getDefaultUrlType">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDefaultUrlTypeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSUrlType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrls">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setFormEmailTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="template" type="tns:WSFormEmailTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSFormEmailTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attachments" nillable="true" type="tns:WSFileAttachment" />
+      <xs:element minOccurs="0" name="content" type="xs:string" />
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="from" type="xs:string" />
+      <xs:element minOccurs="0" name="replyTo" type="xs:string" />
+      <xs:element minOccurs="0" name="subject" type="xs:string" />
+      <xs:element minOccurs="0" name="undeliveredTo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setFormEmailTemplateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSFormEmailTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataFlowSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataFlowSettingsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSDataFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSDataFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contactManagerId" type="xs:long" />
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="settings" nillable="true" type="tns:WSDataFlowSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSDataFlowSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cmFieldReference" type="xs:string" />
+      <xs:element minOccurs="0" name="direction" type="tns:WSDataFlowDirection" />
+      <xs:element minOccurs="0" name="formFieldReference" type="xs:string" />
+      <xs:element name="overrideWithEmptyValues" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPortalResponseSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="settings" type="tns:wsEditResponseSettings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wsEditResponseSettings">
+    <xs:sequence>
+      <xs:element name="allowCopy" type="xs:boolean" />
+      <xs:element name="allowDelete" type="xs:boolean" />
+      <xs:element name="allowEdit" type="xs:boolean" />
+      <xs:element name="allowMultiple" type="xs:boolean" />
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPortalResponseSettingsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getEmailReminders">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEmailRemindersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:WSEmailReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDefaultUrlType">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDefaultUrlTypeResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="publishOnParticipantPortal">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filterId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="publishOnParticipantPortalResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="setDataFlowSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataFlow" type="tns:WSDataFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDataFlowSettingsResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getFormEmailTemplate">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFormEmailTemplateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSFormEmailTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setFormTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formTag" type="tns:WSFormTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSFormTag">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element name="frozen" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="questionTags" nillable="true" type="tns:WSQuestionTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSQuestionTag">
+    <xs:sequence>
+      <xs:element name="autofilled" type="xs:boolean" />
+      <xs:element name="hidden" type="xs:boolean" />
+      <xs:element name="questionId" type="xs:long" />
+      <xs:element name="readOnlyAutofill" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setFormTagResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSFormTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateEmailReminder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reminder" type="tns:WSEmailReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateEmailReminderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSEmailReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFormTag">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFormTagResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSFormTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueURLsToCMList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filterId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueURLsToCMListResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlWithAutofillByEmail">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="autofillDataList" type="tns:WSAutofillData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlWithAutofillByEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:WSEmailLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueUrlWithAutofillByEmail">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="autofillDataList" type="tns:WSAutofillData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueUrlWithAutofillByEmailResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="sendUniqueUrlByEmail">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="emailList" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendUniqueUrlByEmailResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPortalResponseSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="settings" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPortalResponseSettingsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:wsEditResponseSettings" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passwordProtectionThroughContactManager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filterId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passwordProtectionThroughContactManagerResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="passwordProtectionThroughContactManagerForNewFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filter" type="tns:WSModelObjectFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passwordProtectionThroughContactManagerForNewFilterResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrl">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lockAccessToContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="contactId" type="xs:long" />
+      <xs:element minOccurs="0" name="locked" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lockAccessToContactResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="publishOnParticipantPortalWithNewFilter">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element name="cmId" type="xs:long" />
+      <xs:element minOccurs="0" name="filter" type="tns:WSModelObjectFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="publishOnParticipantPortalWithNewFilterResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getEmailReminder">
+    <xs:sequence>
+      <xs:element name="reminderId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEmailReminderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSEmailReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMasterUrl">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+      <xs:element minOccurs="0" name="urlType" type="tns:WSUrlType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMasterUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVotingLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:long" />
+      <xs:element minOccurs="0" name="arg1" type="tns:WSUrlType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVotingLinkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSEmailLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlSendingStatus">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUniqueUrlSendingStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:WSUniqueUrlSendingStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WSUniqueUrlSendingStatus">
+    <xs:sequence>
+      <xs:element name="percentsComplete" type="xs:int" />
+      <xs:element name="secondsElapsed" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIncompleteEmails">
+    <xs:sequence>
+      <xs:element name="formId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getIncompleteEmailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="WSUrlType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REGULAR" />
+      <xs:enumeration value="SECURE" />
+      <xs:enumeration value="IP_ADDRESS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="wsFilterCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOT_EQUAL" />
+      <xs:enumeration value="EQUAL" />
+      <xs:enumeration value="CONTAINS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WSDataFlowDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="FROM_SURVEY_TO_CM" />
+      <xs:enumeration value="FROM_CM_TO_SURVEY" />
+      <xs:enumeration value="BIDIRECTIONAL" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
